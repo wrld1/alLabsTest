@@ -1,9 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .w-1400 {
+    width: 1400px;
+  }
+  .w-1070 {
+    width: 1070px;
+  }
+  .w-959 {
+    width: 959px;
+  }
+  .w-138 {
+    width: 138px;
+  }
+  .w-723 {
+    width: 723px;
+  }
+  .h-29 {
+    height: 116px;
+  }
+  .top-calc {
+    top: calc(50% - 32px / 2 - 2px);
+  }
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(../fonts/proximanova_regular.ttf), url(../fonts/proximanova_bold.otf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Proxima Nova, sans-serif;
+  background-color: #e6e9f2;
 }
 
 a {
@@ -15,12 +50,247 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+ul {
+  list-style: none;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.joblist__img {
+  max-width: 85px;
+  height: 85px;
+}
+
+.pagination {
+  margin: 49px auto 64px;
+  width: 515px;
+  height: 52px;
+  background: #ffffff;
+  box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 10.4px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination .selected {
+  margin-bottom: 0px;
+  border-bottom: 2.6px solid #5876c5;
+}
+
+.pagination li {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-num {
+  width: 31px;
+  height: 31px;
+
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20.8px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1.73333px;
+  justify-content: center;
+
+  /* Grey/07 */
+
+  color: #70778b;
+}
+
+.button__arrow--prev {
+  width: 12px;
+  height: 12px;
+  mix-blend-mode: normal;
+  margin-left: 24px;
+  display: block;
+  border-top: 2px solid #7d859c;
+  border-left: 2px solid #7d859c;
+  transform: rotate(-45deg);
+}
+
+.button__arrow--next {
+  width: 12px;
+  height: 12px;
+  mix-blend-mode: normal;
+  margin-right: 24px;
+  display: block;
+  border-top: 2px solid #7d859c;
+  border-right: 2px solid #7d859c;
+  transform: rotate(45deg);
+}
+
+.pagination .active {
+  color: #5876c5;
+  margin-bottom: -2.6px;
+}
+
+.bookmark {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.bookmark-icon {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 16.67%;
+  bottom: 20.83%;
+  width: 16px;
+  height: 20px;
+}
+
+.share-icon {
+  position: absolute;
+  width: 18px;
+  height: 20px;
+  left: calc(50% - 18px / 2);
+  top: calc(50% - 20px / 2);
+  fill: #70778b;
+  mix-blend-mode: normal;
+}
+
+.job-page__main-block {
+  position: absolute;
+  left: 17.08%;
+  right: 42.6%;
+  top: 0%;
+  bottom: 27.17%;
+}
+
+.job-page__title {
+  position: absolute;
+  left: 0.14%;
+  right: 79.67%;
+  top: 0%;
+  bottom: 22.73%;
+  letter-spacing: 0.413333px;
+}
+
+.employment-type__background {
+  box-sizing: border-box;
+  background: rgba(161, 177, 219, 0.317343);
+  border: 1px solid rgba(85, 105, 158, 0.3);
+  border-radius: 8px;
+}
+
+.benefits__background {
+  background: rgba(255, 207, 0, 0.15);
+  border: 1px solid #ffcf00;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.button__arrow--left {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #384564;
+  border-left: 2px solid #384564;
+  transform: rotate(-45deg);
+}
+
+.star--icon {
+  fill: #38415d;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.button__break {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20.8px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1.73333px;
+  color: #70778b;
+}
+
+.description {
+  white-space: pre-line;
+}
+.description h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.025em;
+  color: #3a4562;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+.description ul {
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+.description li::marker {
+  color: rgba(0, 0, 0, 0.632594);
+}
+
+@media (max-width: 576px) {
+  .proxima {
+    font-family: "Proxima Nova", sans-serif;
   }
-  body {
-    color: white;
-    background: black;
+  .pagination {
+    margin: 26px auto 17px;
+    width: 396px;
+    height: 40px;
+  }
+
+  .pagination .selected {
+    border-bottom: 2px solid #5876c5;
+  }
+
+  .page-num {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1.33333px;
+  }
+
+  .button__arrow--prev {
+    width: 10px;
+    height: 10px;
+
+    margin-left: 18px;
+  }
+
+  .button__arrow--next {
+    width: 10px;
+    height: 10px;
+    margin-right: 18px;
+  }
+
+  .pagination .active {
+    margin-bottom: -2px;
+  }
+
+  .job-page__main-block {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .description h3 {
+    margin-bottom: 0px;
   }
 }
