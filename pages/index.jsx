@@ -8,15 +8,15 @@ const defaultEndpoint = "https://63643eb07b209ece0f4374a5.mockapi.io/jobs";
 
 export async function getStaticProps() {
   const res = await fetch(defaultEndpoint);
-  const data = await res.json();
+  const resData = await res.json();
 
-  if (!data) {
+  if (!resData) {
     return {
       notFound: true,
     };
   }
 
-  // const data = [...resData, ...resData, ...resData, ...resData, ...resData, ...resData, ...resData];
+  const data = [...resData, ...resData, ...resData, ...resData, ...resData, ...resData, ...resData];
 
   return {
     props: { jobs: data },
