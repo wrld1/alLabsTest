@@ -7,19 +7,20 @@ export const Description = ({ description }) => {
     setDomLoaded(true);
   }, []);
 
-  let descriptionResponibilities = String(description).slice(
-    0,
-    description.indexOf("Responsopilities:")
-  );
+  let descriptionResponibilities = description
+    .toString()
+    .slice(0, description.indexOf("Responsopilities:"));
 
-  let descriptionNoEnd = String(description).slice(
-    description.indexOf("Responsopilities:") + "Responsopilities:".length,
-    description.indexOf("Compensation & Benefits:")
-  );
+  let descriptionNoEnd = description
+    .toString()
+    .slice(
+      description.indexOf("Responsopilities:") + "Responsopilities:".length,
+      description.indexOf("Compensation & Benefits:")
+    );
 
-  let descriptionBenefits = String(description).slice(
-    description.indexOf("Compensation & Benefits:")
-  );
+  let descriptionBenefits = description
+    .toString()
+    .slice(description.indexOf("Compensation & Benefits:"));
 
   let descriptionReplace = descriptionBenefits
     .replace("Compensation & Benefits:", "")
