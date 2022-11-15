@@ -8,15 +8,15 @@ const defaultEndpoint = `https://api.json-generator.com/templates/ZM1r0eic3XEy/d
 
 export async function getStaticProps() {
   const res = await fetch(defaultEndpoint);
-  const resData = await res.json();
+  const data = await res.json();
 
-  if (!resData) {
+  if (!data) {
     return {
       notFound: true,
     };
   }
 
-  const data = [...resData, ...resData, ...resData, ...resData, ...resData, ...resData, ...resData];
+  // const data = [...resData, ...resData, ...resData, ...resData, ...resData, ...resData, ...resData];
 
   return {
     props: { jobs: data },
