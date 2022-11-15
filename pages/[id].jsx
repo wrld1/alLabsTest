@@ -1,4 +1,4 @@
-import JobPage from "../components/Jobpage";
+import JobPage from "../components/JobPage";
 
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
