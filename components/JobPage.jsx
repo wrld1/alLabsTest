@@ -6,8 +6,6 @@ import { ShareIcon } from "../public/assets/ShareIcon";
 import { Description } from "./Description";
 
 const JobPage = ({ job }) => {
-  // const { title, description } = job || {};
-
   const {
     title,
     salary,
