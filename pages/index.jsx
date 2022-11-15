@@ -2,9 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import JobList from "../components/JobList";
 
-const defaultEndpoint = `https://api.json-generator.com/templates/ZM1r0eic3XEy/data?access_token=${process.env.NEXT_PUBLIC_API_KEY}`;
+// const defaultEndpoint = `https://api.json-generator.com/templates/ZM1r0eic3XEy/data?access_token=${process.env.NEXT_PUBLIC_API_KEY}`;
 
-// const defaultEndpoint = "https://63643eb07b209ece0f4374a5.mockapi.io/jobs";
+const defaultEndpoint = "https://63643eb07b209ece0f4374a5.mockapi.io/jobs";
 
 export async function getStaticProps() {
   const res = await fetch(defaultEndpoint);
